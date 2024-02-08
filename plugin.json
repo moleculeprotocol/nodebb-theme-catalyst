@@ -1,5 +1,5 @@
 {
-	"id": "nodebb-theme-harmony",
+	"id": "nodebb-theme-headless",
 	"hooks": [
 		{ "hook": "static:app.load", "method": "init" },
 		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
@@ -11,10 +11,10 @@
 		{ "hook": "filter:middleware.renderHeader", "method": "filterMiddlewareRenderHeader" }
 	],
 	"scripts": [
-		"public/harmony.js"
+		"public/headless.js"
 	],
 	"modules": {
-		"../admin/plugins/harmony.js": "public/admin.js",
+		"../admin/plugins/headless.js": "public/admin.js",
 		"../client/account/theme.js": "public/settings.js"
 	},
 	"staticDirs": {

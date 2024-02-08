@@ -1,7 +1,7 @@
-Harmony theme for NodeBB
+headless theme for NodeBB
 ====================
 
-The Harmony theme is the default theme for NodeBB for versions spanning v3.0.0 onwards.
+The headless theme is the default theme for NodeBB for versions spanning v3.0.0 onwards.
 
 ## Issues
 

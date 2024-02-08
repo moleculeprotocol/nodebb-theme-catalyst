@@ -1,14 +1,14 @@
 {
-  "name": "nodebb-theme-harmony",
-  "version": "1.1.108",
+  "name": "nodebb-theme-headless",
+  "version": "0.1.0",
   "nbbpm": {
     "compatibility": "^3.5.0"
   },
-  "description": "Harmony theme for NodeBB",
+  "description": "Headless theme for NodeBB",
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NodeBB/nodebb-theme-harmony"
+    "url": "https://github.com/NodeBB/nodebb-theme-headless"
   },
   "scripts": {
     "lint": "eslint ."
@@ -34,7 +34,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NodeBB/nodebb-theme-harmony/issues"
+    "url": "https://github.com/NodeBB/nodebb-theme-headless/issues"
   },
   "dependencies": {
     "@fontsource/inter": "5.0.15",
