@@ -188,3 +188,18 @@ library.filterTeasersConfigureStripTags = function (hookData) {
 	hookData.tags.push('a');
 	return hookData;
 };
+
+library.createUser = function (data, callback) {
+	data.user.did = data.data.did;
+	callback(null, data);
+};
+
+library.whitelistFields = function (data, callback) {
+	data.whitelist.push('did');
+	callback(null, data);
+};
+
+library.updateProfile = function (data, callback) {
+	data.fields.push('did');
+	callback(null, data);
+};

@@ -1,14 +1,14 @@
 {
-  "name": "nodebb-theme-harmony",
-  "version": "1.2.44",
+  "name": "nodebb-theme-catalyst",
+  "version": "0.1.2",
   "nbbpm": {
     "compatibility": "^3.7.0"
   },
-  "description": "Headless theme for NodeBB",
+  "description": "Headless Catalyst theme for NodeBB",
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NodeBB/nodebb-theme-headless"
+    "url": "https://github.com/moleculeprotocol/nodebb-theme-catalyst"
   },
   "scripts": {
     "lint": "eslint ."
@@ -21,7 +21,7 @@
     "responsive"
   ],
   "contributors": [
-    {
+{
       "name": "Julian Lam",
       "email": "julian@nodebb.org",
       "url": "https://github.com/julianlam"
@@ -30,11 +30,16 @@
       "name": "Barış Soner Uşaklı",
       "email": "baris@nodebb.org",
       "url": "https://github.com/barisusakli"
+    },
+    {
+      "name": "Stefan Adolf",
+      "email": "stefan@molecule.to",
+      "url": "https://github.com/elmariachi111"
     }
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NodeBB/nodebb-theme-headless/issues"
+    "url": "https://github.com/NodeBB/nodebb-theme-harmony/issues"
   },
   "dependencies": {
     "@fontsource/inter": "5.0.15",

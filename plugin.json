@@ -1,5 +1,5 @@
 {
-	"id": "nodebb-theme-headless",
+	"id": "nodebb-theme-catalyst",
 	"hooks": [
 		{ "hook": "static:app.load", "method": "init" },
 		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
@@ -9,7 +9,11 @@
 		{ "hook": "filter:user.saveSettings", "method": "saveUserSettings" },
 		{ "hook": "filter:user.profileMenu", "method": "addProfileItem" },
 		{ "hook": "filter:middleware.renderHeader", "method": "filterMiddlewareRenderHeader" },
-		{ "hook": "filter:teasers.configureStripTags", "method": "filterTeasersConfigureStripTags"}
+		{ "hook": "filter:teasers.configureStripTags", "method": "filterTeasersConfigureStripTags"},
+
+		{ "hook": "filter:user.create", "method": "createUser" },
+		{ "hook": "filter:user.updateProfile", "method": "updateProfile" },
+		{ "hook": "filter:user.whitelistFields", "method": "whitelistFields" }
 	],
 	"scripts": [
 		"public/headless.js"
