@@ -18,7 +18,7 @@
 			<h1 component="post/header" class="tracking-tight fw-semibold fs-3 mb-0 text-break {{{ if config.theme.centerHeaderElements }}}text-center{{{ end }}}" itemprop="headline">
 				<span class="topic-title" component="topic/title">{title}</span>
 			</h1>
-
+		
 			<div class="topic-info d-flex gap-2 align-items-center flex-wrap {{{ if config.theme.centerHeaderElements }}}justify-content-center{{{ end }}}">
 				<span component="topic/labels" class="d-flex gap-2 {{{ if (!scheduled && (!pinned && (!locked && (!oldCid && !icons.length)))) }}}hidden{{{ end }}}">
 					<span component="topic/scheduled" class="badge badge border border-gray-300 text-body {{{ if !scheduled }}}hidden{{{ end }}}">
@@ -44,6 +44,9 @@
 				<div class="d-flex hidden-xs gap-2">
 					<!-- IMPORT partials/topic/stats.tpl -->
 				</div>
+				<div class="d-flex gap-2">
+				<!-- IMPORT partials/ratings.tpl -->
+			</div>
 			</div>
 		</div>
 		<div class="d-flex gap-2 justify-content-end align-items-center mt-2 hidden-empty" component="topic/thumb/list"><!-- IMPORT partials/topic/thumbs.tpl --></div>
