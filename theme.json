@@ -1,7 +1,7 @@
 {
-    "id": "nodebb-theme-headless",
-    "name": "Headless",
-    "description": "A headless based headless design for nodebb",
-    "url": "https://github.com/nodebb/nodebb-theme-headless",
+    "id": "nodebb-theme-catalyst",
+    "name": "Catalyst",
+    "description": "A headless catalyst design for nodebb",
+    "url": "https://github.com/moleculeprotocol/nodebb-theme-catalyst",
     "screenshot": "screenshot.png"
 }
