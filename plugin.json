@@ -16,10 +16,10 @@
 		{ "hook": "filter:user.whitelistFields", "method": "whitelistFields" }
 	],
 	"scripts": [
-		"public/headless.js"
+		"public/harmony.js"
 	],
 	"modules": {
-		"../admin/plugins/headless.js": "public/admin.js",
+		"../admin/plugins/harmony.js": "public/admin.js",
 		"../client/account/theme.js": "public/settings.js"
 	},
 	"staticDirs": {
