@@ -60,8 +60,7 @@
 	{{{ end }}}
 	{{{ end }}}
 
-	<li role="presentation" class="dropdown-divider"></li>
-	<li component="user/logout">
+	<li component="user/logout" class="d-none">
 		<form method="post" action="{relative_path}/logout">
 			<input type="hidden" name="_csrf" value="{config.csrf_token}">
 			<input type="hidden" name="noscript" value="true">
