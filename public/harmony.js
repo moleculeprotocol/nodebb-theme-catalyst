@@ -82,18 +82,18 @@ $(document).ready(function () {
 					lastScrollTop = st;
 					return;
 				}
-				if (st !== lastScrollTop && !navigator.scrollActive && !isSearchVisible()) {
-					const diff = Math.abs(st - lastScrollTop);
-					const scrolledDown = st > lastScrollTop;
-					const scrolledUp = st < lastScrollTop;
-					if (diff > 5) {
-						bottomBar.css({
-							bottom: !scrolledUp && scrolledDown ?
-								-bottomBar.find('.bottombar-nav').outerHeight(true) :
-								0,
-						});
-					}
-				}
+				// if (st !== lastScrollTop && !navigator.scrollActive && !isSearchVisible()) {
+				// 	const diff = Math.abs(st - lastScrollTop);
+				// 	const scrolledDown = st > lastScrollTop;
+				// 	const scrolledUp = st < lastScrollTop;
+				// 	if (diff > 5) {
+				// 		bottomBar.css({
+				// 			bottom: !scrolledUp && scrolledDown ?
+				// 				-bottomBar.find('.bottombar-nav').outerHeight(true) :
+				// 				0,
+				// 		});
+				// 	}
+				// }
 				lastScrollTop = st;
 			}
 
@@ -115,7 +115,7 @@ $(document).ready(function () {
 			});
 			hooks.on('action:ajaxify.end', function () {
 				$window.off('scroll', delayedScroll);
-				bottomBar.css({ bottom: 0 });
+				// bottomBar.css({ top: 0 });
 				setTimeout(enableAutohide, 250);
 			});
 		});

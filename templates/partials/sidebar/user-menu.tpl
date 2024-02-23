@@ -10,36 +10,6 @@
 		</a>
 	</li>
 	<li role="presentation" class="dropdown-divider"></li>
-	<li><h6 class="dropdown-header text-xs">[[global:status]]</h6></li>
-	<li>
-		<a href="#" class="dropdown-item rounded-1 user-status d-flex align-items-center gap-2 {{{ if user.online }}}selected{{{ end }}}" data-status="online" role="menuitem">
-			<span component="user/status" class="flex-shrink-0 border border-white border-2 rounded-circle status online"></span>
-			<span class="flex-grow-1">[[global:online]]</span>
-			<i class="fa-solid fa-check text-secondary flex-shrink-0" aria-label="[[global:selected]]"></i>
-		</a>
-	</li>
-	<li>
-		<a href="#" class="dropdown-item rounded-1 user-status d-flex align-items-center gap-2 {{{ if user.away }}}selected{{{ end }}}" data-status="away" role="menuitem">
-			<span component="user/status" class="flex-shrink-0 border border-white border-2 rounded-circle status away"></span>
-			<span class="flex-grow-1">[[global:away]]</span>
-			<i class="fa-solid fa-check text-secondary flex-shrink-0"><span class="visually-hidden"></span>[[global:selected]]</span></i>
-		</a>
-	</li>
-	<li>
-		<a href="#" class="dropdown-item rounded-1 user-status d-flex align-items-center gap-2 {{{ if user.dnd }}}selected{{{ end }}}" data-status="dnd" role="menuitem">
-			<span component="user/status" class="flex-shrink-0 border border-white border-2 rounded-circle status dnd"></span>
-			<span class="flex-grow-1">[[global:dnd]]</span>
-			<i class="fa-solid fa-check text-secondary flex-shrink-0"></i>
-		</a>
-	</li>
-	<li>
-		<a href="#" class="dropdown-item rounded-1 user-status d-flex align-items-center gap-2 {{{ if user.offline }}}selected{{{ end }}}" data-status="offline" role="menuitem">
-			<span component="user/status" class="flex-shrink-0 border border-white border-2 rounded-circle status offline"></span>
-			<span class="flex-grow-1">[[global:invisible]]</span>
-			<i class="fa-solid fa-check text-secondary flex-shrink-0"></i>
-		</a>
-	</li>
-	<li role="presentation" class="dropdown-divider"></li>
 	<li>
 		<a class="dropdown-item rounded-1 d-flex align-items-center gap-2" href="{relative_path}/user/{user.userslug}/bookmarks" role="menuitem">
 			<i class="fa fa-fw fa-bookmark text-secondary"></i> <span>[[user:bookmarks]]</span>

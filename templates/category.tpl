@@ -3,7 +3,7 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 {{{ end }}}
 
-<div class="category-header d-flex flex-column gap-2">
+<div class="category-header d-none flex-column gap-2">
 	<div class="d-flex gap-2 align-items-center mb-1 {{{ if config.theme.centerHeaderElements }}}justify-content-center{{{ end }}}">
 		{buildCategoryIcon(@value, "40px", "rounded-1 flex-shrink-0")}
 		<h1 class="tracking-tight fs-2 fw-semibold mb-0 text-center">{./name}</h1>
@@ -25,7 +25,7 @@
 {{{ end }}}
 
 
-<div class="row mt-3">
+<div class="row mt-5 mt-lg-0">
 	<div class="category d-flex flex-column {{{if widgets.sidebar.length }}}col-lg-9 col-sm-12{{{ else }}}col-lg-12{{{ end }}}">
 		<!-- IMPORT partials/category/subcategory.tpl -->
 		{{{ if (topics.length || privileges.topics:create) }}}

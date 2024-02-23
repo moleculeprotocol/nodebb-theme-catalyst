@@ -1,11 +1,11 @@
-<div component="bottombar" class="bottombar d-flex flex-column d-lg-none fixed-bottom ff-secondary gap-1 align-items-center" style="bottom: 0px;">
+<div component="bottombar" class="bottombar d-flex flex-column d-lg-none fixed-top ff-secondary gap-1 align-items-center" style="bottom: 0px;">
 
 	<!-- IMPORT partials/topic/navigator-mobile.tpl -->
 
 	<div class="bottombar-nav p-2 text-dark bg-light d-flex justify-content-between align-items-center w-100">
 		<div class="bottombar-nav-left d-flex gap-3 align-items-center">
 			<div>
-				<a href="#" role="button" class="nav-link d-flex justify-content-between align-items-center position-relative" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<a href="#" role="button" class="nav-link d-none justify-content-between align-items-center position-relative" data-bs-toggle="dropdown">
 					<span class="position-relative">
 						<i class="fa fa-fw fa-lg fa-bars"></i>
 						<span component="unread/count" data-unread-url="{unreadCount.unreadUrl}" class="position-absolute top-0 start-100 translate-middle badge rounded-1 bg-primary {{{ if !unreadCount.mobileUnread }}}hidden{{{ end }}}">{unreadCount.mobileUnread}</span>
