@@ -1,4 +1,4 @@
-<div component="bottombar" class="bottombar d-flex flex-column d-lg-none fixed-top ff-secondary gap-1 align-items-center" style="bottom: 0px;">
+<div component="bottombar" class="bottombar d-none flex-column d-lg-none fixed-top ff-secondary gap-1 align-items-center" style="bottom: 0px;">
 
 	<!-- IMPORT partials/topic/navigator-mobile.tpl -->
 

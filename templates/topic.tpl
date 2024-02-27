@@ -10,9 +10,9 @@
 </div>
 {{{ end }}}
 
-<div class="d-flex flex-column gap-3 mt-5 mt-lg-0" itemid="{url}" itemscope itemtype="https://schema.org/DiscussionForumPosting">
-<meta itemprop="headline" content="{escape(titleRaw)}">
-<meta itemprop="url" content="{url}">
+<div class="d-flex flex-column gap-3 mt-0" itemid="{url}" itemscope itemtype="https://schema.org/DiscussionForumPosting">
+	<meta itemprop="headline" content="{escape(titleRaw)}">
+	<meta itemprop="url" content="{url}">
 	<meta itemprop="datePublished" content="{timestampISO}">
 	<meta itemprop="dateModified" content="{lastposttimeISO}">
 	<meta itemprop="author" itemscope itemtype="https://schema.org/Person" itemref="topicAuthorName{{{ if author.userslug }}} topicAuthorUrl{{{ end }}}">
@@ -21,9 +21,8 @@
 	<div class="d-flex flex-wrap">
 		<div class="d-flex flex-column gap-3 flex-grow-1">
 			<div class="d-flex flex-row align-items-center gap-2">
-				<a href="{config.relative_path}/category/{category.slug}">
-					<i class="fa fa-chevron-left"></i>
-				</a>
+				<a href="{config.relative_path}/category/{category.slug}" data-action="close" role="button" class="flex-shrink-0 d-flex d-md-none btn btn-outline align-text-top"><i class="fa fa-chevron-left"></i></a>
+
 			
 				<h1 component="post/header" class="tracking-tight fw-semibold fs-3 mb-0 text-break {{{ if config.theme.centerHeaderElements }}}text-center{{{ end }}}">
 					<span class="topic-title" component="topic/title">{title}</span>
