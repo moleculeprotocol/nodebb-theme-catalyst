@@ -4,6 +4,8 @@ const nconf = require.main.require('nconf');
 const meta = require.main.require('./src/meta');
 const _ = require.main.require('lodash');
 const user = require.main.require('./src/user');
+const privileges = require.main.require('./src/privileges');
+const db = require.main.require('./src/database');
 
 const controllers = require('./lib/controllers');
 
@@ -199,4 +201,28 @@ library.whitelistFields = function (data, callback) {
 library.updateProfile = function (data, callback) {
 	data.fields.push('did');
 	callback(null, data);
+};
+
+const getChatroomForGroup = async (slug) => {
+	const result = await db.client.collection('objects')
+		.findOne({
+			_key: { $regex: '^chat:room:\\d+$' },
+			groups: `["${slug}"]`,
+		}, { _id: false });
+
+	return result;
+};
+
+library.addChatToCategory = function (data, callback) {
+	privileges.categories.list(data.category.cid).then((res, err) => {
+		const projectGroup = res.groups.find(group => group.isPrivate && group.name.startsWith('Project '));
+		if (!projectGroup) {
+			return callback(null, data);
+		}
+		getChatroomForGroup(projectGroup.name).then((chatroomdata) => {
+			// console.log('Chatroom data', chatroomdata);
+			data.category.chatroom = chatroomdata;
+			callback(null, data);
+		});
+	});
 };

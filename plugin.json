@@ -12,7 +12,9 @@
 
 		{ "hook": "filter:user.create", "method": "createUser" },
 		{ "hook": "filter:user.updateProfile", "method": "updateProfile" },
-		{ "hook": "filter:user.whitelistFields", "method": "whitelistFields" }
+		{ "hook": "filter:user.whitelistFields", "method": "whitelistFields" },
+
+		{ "hook": "filter:category.get", "method": "addChatToCategory"}
 	],
 	"scripts": [
 		"public/harmony.js"
