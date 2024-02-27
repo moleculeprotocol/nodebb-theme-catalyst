@@ -56,12 +56,6 @@
 					<!-- IMPORT partials/sidebar/notifications.tpl -->
 					</li>
 
-					{{{ if canChat }}}
-					<li class="nav-item m-0 chats">
-					<!-- IMPORT partials/sidebar/chats.tpl -->
-					</li>
-					{{{ end }}}
-
 					<li component="sidebar/drafts" class="hidden nav-item m-0 drafts">
 					<!-- IMPORT partials/sidebar/drafts.tpl -->
 					</li>
