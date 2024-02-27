@@ -7,24 +7,44 @@
 {{{ end }}}
 
 <div class="d-flex align-items-start gap-3">
-	<div class="icon bg-body d-none d-sm-block rounded-circle" style="outline: 2px solid var(--bs-body-bg);">
+	<!--div class="icon bg-body d-none d-sm-block rounded-circle" style="outline: 2px solid var(--bs-body-bg);">
 		<a class="d-inline-block position-relative text-decoration-none" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 			{buildAvatar(posts.user, "48px", true, "", "user/picture")}
 			<span component="user/status" class="position-absolute translate-middle-y border border-white border-2 rounded-circle status {posts.user.status}"><span class="visually-hidden">[[global:{posts.user.status}]]</span></span>
 		</a>
+	</div-->
+
+	{{{ if !reputation:disabled }}}
+	<div class="d-flex flex-column" style="margin-left:6px">
+		<a component="post/upvote" href="#" class="btn-ghost-sm {{{ if posts.upvoted }}}upvoted{{{ end }}}">
+			<i class="fa fa-fw fa-chevron-up text-primary"></i>
+		</a>
+
+		<meta itemprop="upvoteCount" content="{posts.upvotes}">
+		<meta itemprop="downvoteCount" content="{posts.downvotes}">
+		<div class="d-inline-block px-2 mx-1 btn-ghost-sm" component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</div>
+
+		{{{ if !downvote:disabled }}}
+		<a component="post/downvote" href="#" class="btn-ghost-sm {{{ if posts.downvoted }}}downvoted{{{ end }}}">
+			<i class="fa fa-fw fa-chevron-down text-primary"></i>
+		</a>
+		{{{ end }}}
 	</div>
+	{{{ end }}}
+
 
 	<div class="post-container d-flex flex-grow-1 flex-column w-100" style="min-width: 0;">
 		<div class="d-flex align-items-center gap-1 flex-wrap w-100 post-header mt-1" itemprop="author" itemscope itemtype="https://schema.org/Person">
 			<meta itemprop="name" content="{./user.username}">
 			{{{ if ./user.userslug }}}<meta itemprop="url" content="{config.relative_path}/user/{./user.userslug}">{{{ end }}}
 
-			<div class="icon bg-body d-sm-none">
+			<!--div class="icon bg-body d-sm-none">
 				<a class="d-inline-block position-relative text-decoration-none" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}">
 					{buildAvatar(posts.user, "20px", true, "", "user/picture")}
 					<span component="user/status" class="position-absolute translate-middle-y border border-white border-2 rounded-circle status {posts.user.status}"><span class="visually-hidden">[[global:{posts.user.status}]]</span></span>
 				</a>
-			</div>
+			</div-->
+
 
 			<span class="text-nowrap">
 				<a class="fw-bold" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.displayname}</a>
