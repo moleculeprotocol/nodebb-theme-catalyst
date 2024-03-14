@@ -48,7 +48,7 @@
 	</button>
 
 	<!-- manage/options dropdown -->
-	<div class="dropdown d-flex" data-manual-tooltip="1" title="[[modules:chat.options]]">
+	<!--<div class="dropdown d-flex" data-manual-tooltip="1" title="[[modules:chat.options]]">
 		<button class="btn-ghost-sm" data-bs-toggle="dropdown" component="chat/controlsToggle">
 			<i class="fa fa-gear text-muted"></i>
 		</button>
@@ -78,7 +78,7 @@
 			</li>
 			{{{ end }}}
 		</ul>
-	</div>
+	</div>-->
 
 	<!-- users toggle -->
 	{{{ if users.length }}}
