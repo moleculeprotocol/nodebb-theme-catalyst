@@ -102,7 +102,7 @@
 
 	<div class="d-flex">
 		{{{ if !hideReplies }}}
-		<a component="post/reply-count" data-target-component="post/replies/container" href="#" class="d-flex gap-2 align-items-center mt-2 btn-ghost ff-secondary border rounded-1 p-1 threaded-replies user-select-none text-muted text-decoration-none text-xs {{{ if (!./replies || shouldHideReplyContainer(@value)) }}}hidden{{{ end }}}">
+		<a component="post/reply-count" data-target-component="post/replies/container" href="#" class="d-flex gap-2 align-items-center mt-2 btn-outline border rounded-1 p-1 threaded-replies user-select-none text-muted text-decoration-none text-xs {{{ if (!./replies || shouldHideReplyContainer(@value)) }}}hidden{{{ end }}}">
 			<span component="post/reply-count/avatars" class="avatars d-inline-flex gap-1 align-items-top {{{ if posts.replies.hasMore }}}hasMore{{{ end }}}">
 				{{{each posts.replies.users}}}
 				<span>{buildAvatar(posts.replies.users, "20px", true, "avatar-tooltip")}</span>
@@ -129,23 +129,7 @@
 		<a component="post/reply" href="#" class="btn-ghost-sm user-select-none {{{ if !privileges.topics:reply }}}hidden{{{ end }}}" title="[[topic:reply]]"><i class="fa fa-fw fa-reply text-primary"></i></a>
 		<a component="post/quote" href="#" class="btn-ghost-sm user-select-none {{{ if !privileges.topics:reply }}}hidden{{{ end }}}" title="[[topic:quote]]"><i class="fa fa-fw fa-quote-right text-primary"></i></a>
 
-		{{{ if !reputation:disabled }}}
-		<div class="d-flex votes align-items-center">
-			<a component="post/upvote" href="#" class="btn-ghost-sm {{{ if posts.upvoted }}}upvoted{{{ end }}}" title="[[topic:upvote-post]]">
-				<i class="fa fa-fw fa-chevron-up text-primary"></i>
-			</a>
 
-			<meta itemprop="upvoteCount" content="{posts.upvotes}">
-			<meta itemprop="downvoteCount" content="{posts.downvotes}">
-			<a href="#" class="d-inline-block px-2 mx-1 btn-ghost-sm ff-secondary" component="post/vote-count" data-votes="{posts.votes}" title="[[global:voters]]">{posts.votes}</a>
-
-			{{{ if !downvote:disabled }}}
-			<a component="post/downvote" href="#" class="btn-ghost-sm {{{ if posts.downvoted }}}downvoted{{{ end }}}" title="[[topic:downvote-post]]">
-				<i class="fa fa-fw fa-chevron-down text-primary"></i>
-			</a>
-			{{{ end }}}
-		</div>
-		{{{ end }}}
 
 		<!-- IMPORT partials/topic/post-menu.tpl -->
 	</div>
