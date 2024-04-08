@@ -1,4 +1,4 @@
-.btn.btn-primary  {
+.btn.btn-primary:not(.composer):not(.composer-discard):not(.composer-minimize):not(.composer-submit) {
   background-image: linear-gradient(to right, #13C0B7, #17C5C3, #37BDD1, #41A4C4);
   padding: .5rem;
   padding-left: 1rem;
@@ -24,6 +24,15 @@
   &:disabled {
     background-image: none;
     background-color: $gray-500;
+  }
+}
+
+.composer-container .navbar {
+  .btn, .title {
+    color: white;
+  }
+  .btn.composer-submit::before {
+    content: "submit";
   }
 }
 
