@@ -1,19 +1,25 @@
-@use "@fontsource/inter/scss/mixins" as Inter;
-@use "@fontsource/poppins/scss/mixins" as Poppins;
+//$font-path: "./plugins/nodebb-theme-catalyst" !default;
 
-$weights: $font-weight-light, $font-weight-normal, $font-weight-semibold, $font-weight-bold;
-$subsets: (latin, latin-ext);
-$font-path: "./plugins/nodebb-theme-harmony" !default;
+@font-face {
+  font-family: 'Aeonik';
+  src: url('plugins/nodebb-theme-catalyst/fonts/Aeonik-Regular.woff2') format('woff2'); 
+  font-weight: 200 400;
+}
 
-@include Inter.faces(
-	$weights: $weights,
-	$subsets: $subsets,
-	$display: fallback,
-	$directory: "#{$font-path}/inter"
-);
-@include Poppins.faces(
-	$weights: $weights,
-	$subsets: $subsets,
-	$display: fallback,
-	$directory: "#{$font-path}/poppins"
-);
+@font-face {
+  font-family: 'Aeonik';
+  src: url('plugins/nodebb-theme-catalyst/fonts/Aeonik-Medium.woff2') format('woff2'); 
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('plugins/nodebb-theme-catalyst/fonts/Aeonik-Bold.woff2') format('woff2'); 
+  font-weight: 600 900;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('plugins/nodebb-theme-catalyst/fonts/AeonikMono-Medium.woff2') format('woff2'); 
+  font-style: oblique;
+}
