@@ -1,28 +1,32 @@
 .btn.btn-primary  {
-		background-image: linear-gradient(to right, #13C0B7, #17C5C3, #37BDD1, #41A4C4);
-    padding: .5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    border-radius: $border-radius-pill;
-    font-weight: $font-weight-semibold;
-    font-size:   $font-size-sm;
-    color: "white";
-    &:hover {
-      background-image: linear-gradient(to left, #13C0B7, #17C5C3, #37BDD1, #41A4C4);
-      &:disabled {
-        background-image: none;
-        background-color: $moleculeAqua;
-      }
-      // &:disabled {
-      //   background-image: none;
-      //   background-color: $moleculeAqua;
-      // }
-      &:focus {
-        background-image: linear-gradient(to left,$moleculeAqua-500, $moleculeAqua-500);
-      }
-    }
+  background-image: linear-gradient(to right, #13C0B7, #17C5C3, #37BDD1, #41A4C4);
+  padding: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: $border-radius-pill;
+  font-weight: $font-weight-semibold;
+  font-size:   $font-size-sm;
+  color: "white";
+  &:hover {
+    background-image: linear-gradient(to left, #13C0B7, #17C5C3, #37BDD1, #41A4C4);
     &:disabled {
       background-image: none;
-      background-color: $gray-500;
+      background-color: $moleculeAqua;
+    }
+    // &:disabled {
+    //   background-image: none;
+    //   background-color: $moleculeAqua;
+    // }
+    &:focus {
+      background-image: linear-gradient(to left,$moleculeAqua-500, $moleculeAqua-500);
     }
   }
+  &:disabled {
+    background-image: none;
+    background-color: $gray-500;
+  }
+}
+
+a[href] {
+  color: $moleculePurple-500;
+}
