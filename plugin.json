@@ -25,8 +25,7 @@
 		"../client/account/theme.js": "public/settings.js"
 	},
 	"staticDirs": {
-		"inter": "node_modules/@fontsource/inter/files",
-		"poppins": "node_modules/@fontsource/poppins/files"
+		"fonts": "public/fonts"
 	},
 	"languages": "languages"
 }

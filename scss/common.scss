@@ -83,7 +83,8 @@ body:not(.page-user) {
 	position: sticky;
 	z-index: 3;
 	top: 0;
-	padding: 0.25rem 0;
+	//disabled for molecule
+	//padding: 0.25rem 0;
 }
 // quartz doesn't need body-bg for tool background
 .skin-quartz .sticky-tools {

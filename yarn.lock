@@ -39,16 +39,6 @@
   resolved "https://registry.npmjs.org/@eslint/js/-/js-8.55.0.tgz"
   integrity sha512-qQfo2mxH5yVom1kacMtZZJFVdW+E70mqHMJvVg6WTLo+VBuQJ4TojZlfWBjK0ve5BdEeNAVxOsl/nvNMpJOaJA==
 
-"@fontsource/inter@5.0.15":
-  version "5.0.15"
-  resolved "https://registry.npmjs.org/@fontsource/inter/-/inter-5.0.15.tgz"
-  integrity sha512-/IoWYEXl8lqJEx50JqNPT+bI4VNwxb/bg2oOfvG8PiEsDsmHRFvWBVHlohBNn1+QdBf+KbAjU/gb4vlGOSsVWw==
-
-"@fontsource/poppins@5.0.8":
-  version "5.0.8"
-  resolved "https://registry.npmjs.org/@fontsource/poppins/-/poppins-5.0.8.tgz"
-  integrity sha512-P8owfYWluoUY5Nyzk4gT/L6LmLmseP6ezFWhj6VBUa5pRIdnCvNJpoQ6i/vhekjtJOfqX6nKlB+LCttoUl2GQQ==
-
 "@humanwhocodes/config-array@^0.11.13":
   version "0.11.13"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.11.13.tgz"

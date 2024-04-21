@@ -1,7 +1,7 @@
-<div class="btn-group bottom-sheet" component="thread/sort">
+<div class="btn-group top-sheet" component="thread/sort">
 	<button class="btn-ghost-sm ff-secondary d-flex gap-2 align-items-center dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="[[aria:post-sort-option, {sortOptionLabel}]]">
 		<i class="fa fa-fw fa-arrow-down-wide-short text-primary"></i>
-		<span class="d-none d-md-inline fw-semibold">{sortOptionLabel}</span>
+		<span class="d-none d-sm-inline fw-semibold">{sortOptionLabel}</span>
 	</button>
 
 	<ul class="dropdown-menu p-1 text-sm" role="menu">
