@@ -191,6 +191,21 @@ library.filterTeasersConfigureStripTags = function (hookData) {
 	return hookData;
 };
 
+library.filterProfileLinks = async function (data) {
+	const postContent = data.postData.content;
+	const config = await library.loadThemeConfig(0);
+
+	const regex = /<a class="plugin-mentions-user plugin-mentions-a" href="(https:\/\/(.+))\/uid\/(\d+)">@(.*)<\/a>/gi;
+	const newContent = postContent.replace(regex, (atag, schemehost, host, uid, uname) => {
+		let result = atag.replace(`${schemehost}/uid`, config.catalystProfileUrl);
+		result = result.replace(`class="`, `target="_top" class="`);
+		return result;
+	});
+
+	console.log('New content', postContent, newContent);
+	return { ...data, postData: { ...data.postData, content: newContent } };
+};
+
 library.createUser = function (data, callback) {
 	data.user.did = data.data.did;
 	callback(null, data);
