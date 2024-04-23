@@ -49,8 +49,8 @@
 					</div>
 				</div>
 				<div class="mb-3">
-				<label class="form-label" for="catalystProfileUrl">Catalyst Base URL</label>
-				<input type="text" id="catalystProfileUrl" name="catalystProfileUrl" title="Catalyst profile URL" class="form-control" placeholder="https://desci.catalyst.molecule.local" />
+				<label class="form-label" for="catalystProfileUrl">Catalyst Profile Base URL</label>
+				<input type="text" id="catalystProfileUrl" name="catalystProfileUrl" title="Catalyst profile URL" class="form-control" placeholder="https://app.catalyst.molecule.xyz/api/nodebb-profile" />
 			</div>
 			</form>
 		</div>

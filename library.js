@@ -202,7 +202,6 @@ library.filterProfileLinks = async function (data) {
 		return result;
 	});
 
-	console.log('New content', postContent, newContent);
 	return { ...data, postData: { ...data.postData, content: newContent } };
 };
 
