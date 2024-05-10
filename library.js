@@ -191,20 +191,6 @@ library.filterTeasersConfigureStripTags = function (hookData) {
 	return hookData;
 };
 
-library.filterProfileLinks = async function (data) {
-	const postContent = data.postData.content;
-	const config = await library.loadThemeConfig(0);
-
-	const regex = /<a class="plugin-mentions-user plugin-mentions-a" href="(https:\/\/(.+))\/uid\/(\d+)">@(.*)<\/a>/gi;
-	const newContent = postContent.replace(regex, (atag, schemehost, host, uid, uname) => {
-		let result = atag.replace(`${schemehost}/uid`, config.catalystProfileUrl);
-		result = result.replace(`class="`, `target="_top" class="`);
-		return result;
-	});
-
-	return { ...data, postData: { ...data.postData, content: newContent } };
-};
-
 library.createUser = function (data, callback) {
 	data.user.did = data.data.did;
 	callback(null, data);
@@ -231,7 +217,7 @@ const getChatroomForGroup = async (slug) => {
 };
 
 library.addChatToCategory = function (data, callback) {
-	privileges.categories.list(data.category.cid).then((res, err) => {
+	privileges.categories.list(data.category.cid).then((res) => {
 		const projectGroup = res.groups.find(group => group.isPrivate && group.name.startsWith('Project '));
 		if (!projectGroup) {
 			return callback(null, data);
@@ -242,4 +228,25 @@ library.addChatToCategory = function (data, callback) {
 			callback(null, data);
 		});
 	});
+};
+const removeTrailingSlash = (url) => {
+	if (url.endsWith('/')) {
+		return url.slice(0, -1);
+	}
+	return url;
+};
+
+library.redirectToCatalystProfile = async function (data) {
+	const config = await library.loadThemeConfig(0);
+	const baseUrl = removeTrailingSlash(config.catalystUrl.replace('https://', ''));
+	return controllers.renderProfilePage(
+		{
+			params: {
+				...data.req.params,
+				redirectUrl: `https://${baseUrl}/profile/${data.templateData.username}`,
+			},
+			...data.req,
+		},
+		data.res
+	);
 };
