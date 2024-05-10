@@ -47,8 +47,7 @@
 
 
 			<span class="text-nowrap">
-				<!--a class="fw-bold" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}" data-username="{posts.user.username}" data-uid="{posts.user.uid}" target="_parent">{posts.user.displayname}</a -->
-				<a class="fw-bold" href="{config.theme.catalystProfileUrl}/{./user.uid}" target="_parent">{posts.user.displayname}</a>
+				<a id="testing-parent" class="fw-bold" href="{{{ if ./user.userslug }}}{config.relative_path}/user/{./user.userslug}{{{ else }}}#{{{ end }}}" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.displayname} hello world</a>
 			</span>
 
 			{{{ each posts.user.selectedGroups }}}
