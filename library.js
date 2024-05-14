@@ -231,7 +231,7 @@ const getChatroomForGroup = async (slug) => {
 };
 
 library.addChatToCategory = function (data, callback) {
-	privileges.categories.list(data.category.cid).then((res, err) => {
+	privileges.categories.list(data.category.cid).then((res) => {
 		const projectGroup = res.groups.find(group => group.isPrivate && group.name.startsWith('Project '));
 		if (!projectGroup) {
 			return callback(null, data);
@@ -242,4 +242,12 @@ library.addChatToCategory = function (data, callback) {
 			callback(null, data);
 		});
 	});
+};
+
+library.openCatalystProfilePage = async function (data) {
+	const config = await library.loadThemeConfig(0);
+	const baseUrl = config.catalystBaseUrl.endsWith('/') ?
+		config.catalystBaseUrl.replace('https://', '').slice(0, -1) :
+		config.catalystBaseUrl.replace('https://', '');
+	controllers.renderProfilePage({ ...data.req, redirectUrl: `https://${baseUrl}/profile/${data.templateData.username}` }, data.res);
 };
