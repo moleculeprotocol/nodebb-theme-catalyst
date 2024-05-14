@@ -16,7 +16,8 @@
 		{ "hook": "filter:user.whitelistFields", "method": "whitelistFields" },
 
 		{ "hook": "filter:category.get", "method": "addChatToCategory"},
-		{ "hook": "filter:parse.post", "method": "filterProfileLinks", "priority": 11}
+		{ "hook": "filter:parse.post", "method": "filterProfileLinks", "priority": 11},
+    	{ "hook": "filter:account/profile.build", "method": "openCatalystProfilePage"}
 
 	],
 	"scripts": [
